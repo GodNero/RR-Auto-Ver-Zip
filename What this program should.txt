@@ -2,7 +2,7 @@ Automated Update program.
 
 Step 01 Have user set Resonant Rise file path (e.g. C:\Users\<username>\Documents\RR DEV\) Only do this once.
 
-Step 02 Have user set a Folder to drop all finished .zip files into (e.g. C:\Users\<username>\Documents\RR Zip Folder)
+Step 02 Have user set a Folder to drop all finished .zip files into (e.g. C:\Users\<username>\Documents\RR Zip Folder) Only do this once.
 
 Step 03 Have user Input RR Version Number via text entry at command line (or preferably a visual field)
 	IF nothing is enterd then confirm NO change is made. (we will call this Variable A)
