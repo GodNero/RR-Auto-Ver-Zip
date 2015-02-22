@@ -1,0 +1,44 @@
+Automated Update program.
+
+Step 01 Have user set Resonant Rise file path (e.g. C:\Users\<username>\Documents\RR DEV\) Only do this once.
+
+Step 02 Have user set a Folder to drop all finished .zip files into (e.g. C:\Users\<username>\Documents\RR Zip Folder)
+
+Step 03 Have user Input RR Version Number via text entry at command line (or preferably a visual field)
+	IF nothing is enterd then confirm NO change is made. (we will call this Variable A)
+
+Step 04 Print the RR Version Input and ask to confirm.
+
+Step 05 Have user Input Dev Version Number via text entry at command line (or preferably a visual field)
+	IF nothing is enterd then confirm NO change is made. (we will call this Variable b)
+
+Step 06 Print the RR Version Input and ask to confirm.
+
+Step 07 Search the Directories for any OpenEye.json files
+
+Step 08 Alter Line 26 (or search for the first data block, followed by the first tag block, and finally the first value block, then parse the line and edit as follows.) of each file for version numbers. 
+	First number (3.x.x.x) is the RR Version number, this will be replaced with Variable A.
+	Second number (RR 3-DEV-xxx) is the development number, this will be replaced with Variable B.
+
+Step 09 Print what each modified line will look like and ask for confirmation.
+	If Yes Move to next change
+		Else ask to skip or manually alter
+			If manually alter bring up a text field or command line to allow for user input.
+				print new modified entry ask for confirmation
+					If yes save mode to next file
+						else return to manual entry or skip.
+			Else save file move onto the next change
+		Else if no other OpenEye.json files are found finish this step.
+
+Step 10 Zip instance folders
+	Instance folders are structured as:
+		00_eterniry
+			config
+			mods
+			scripts
+	the zipped files would need to follow this nameing scheme <instance name>_3-DEV-<Variable B>.zip
+		e.g. 00_eternity_3-DEV-065.zip
+
+Step 11 open folder containing zip fils.
+
+Step 12 ask to close program.
